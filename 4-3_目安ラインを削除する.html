@@ -12,7 +12,7 @@
 <body>
     <header>
         <p>タスク管理アプリ-マニュアル</p>
-        <div class="hamburger-wrap">
+        <div id="hamburger-wrap">
             <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -127,10 +127,11 @@
     </main>
 
     <script>
+        const hamburger_wrap = document.getElementById('hamburger-wrap');
         const hamburger = document.getElementById('hamburger');
         const menu = document.getElementById('menu-area');
 
-        hamburger.addEventListener('click', () => {
+        hamburger_wrap.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             menu.classList.toggle('show');
             document.body.classList.toggle('no-scroll');
@@ -145,6 +146,8 @@
         });
         });
   </script>
+
+
 
 </body>
 </html>
