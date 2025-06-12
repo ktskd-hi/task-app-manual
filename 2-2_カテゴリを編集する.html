@@ -12,8 +12,15 @@
 <body>
     <header>
         <p>タスク管理アプリ-マニュアル</p>
+        <div class="hamburger-wrap">
+            <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+        </div>
     </header>
-    <aside>
+    <aside id="menu-area">
         <nav>
             <!-- メニュー -->
              <!-- <h1>メニュー</h1> -->
@@ -117,5 +124,26 @@
             </div>
         </footer>
     </main>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu-area');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('show');
+            document.body.classList.toggle('no-scroll');
+        });
+
+        // メニューのリンクをクリックしたら閉じる
+        document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            menu.classList.remove('show');
+            document.body.classList.remove('no-scroll');
+        });
+        });
+  </script>
+
 </body>
 </html>
