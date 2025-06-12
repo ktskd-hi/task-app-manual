@@ -27,6 +27,11 @@ body {
     background: #4D6A84;
 }
 
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 
 a {
     color: inherit;
@@ -36,12 +41,13 @@ a {
 header {
     position: fixed;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin: 0;
     top: 0;
     z-index: 100;
     background: #527292;
-    width: 100vw;
+    width: 100%;
     height: 64px;
 }
 
@@ -50,6 +56,70 @@ header p {
     font-size: 24px;
     padding-left: 14px;
 }
+
+@media (max-width: 1024px) {
+    header p {
+        font-size: 18px;
+        padding-left: 8px;
+    }
+}
+
+
+
+header .hamburger-wrap {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: #35526C;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    width: 22px;
+    height: 18px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+/* ✕ のアニメーション */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 1024px) {
+    header {
+        height: 44px;
+    }
+
+    header .hamburger-wrap {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+
 
 aside {
     position: fixed;
@@ -63,6 +133,21 @@ aside {
     /* Firefox対応 */
     scrollbar-color: #7EA1C0 #35526C;
     scrollbar-width:calc(16px)
+}
+
+@media (max-width: 1024px) {
+    aside {
+        display: none;
+    }
+
+    #menu-area.show {
+        display:block;
+        width: 100%;
+        height: 100%;
+        /* opacity: 0.8; */
+        z-index: 100;
+        margin-top: 44px;
+    }
 }
 
 /* Chrome, Safari 対応 */
@@ -139,6 +224,13 @@ main {
     background: #4D6A84;
 }
 
+@media (max-width: 1024px) {
+    main {
+        margin: 0;
+        padding: 44px 0 0 4px;
+    }
+}
+
 article {
     margin-right: 16px;
 }
@@ -180,9 +272,53 @@ article img {
     width: 740px;
 }
 
+
 main hr {
     margin-top: 112px;
 }
+
+
+@media (max-width: 1024px) {
+    article {
+        margin-right: 8px;
+    }
+
+    article .title-area {
+        padding-top: 20px;
+        /* margin-right: 16px; */
+    }
+
+    article h1 {
+        font-size: 28px;
+    }
+
+    article .about-text {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    article hr {
+        margin: 32px 0 0;
+    }
+
+    article h2 {
+        margin-top: 40px;
+        font-size: 20px;
+    }
+
+    article img {
+        margin-top: 16px;
+        padding: 4px;
+        width: 88%;
+    }
+
+
+    main hr {
+        margin-top: 88px;
+    }
+}
+
+
 
 footer {
     width: 100%;
