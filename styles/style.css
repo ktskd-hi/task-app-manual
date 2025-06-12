@@ -59,7 +59,7 @@ header p {
 
 @media (max-width: 1024px) {
     header p {
-        font-size: 18px;
+        font-size: 20px;
         padding-left: 8px;
     }
 }
@@ -70,16 +70,16 @@ header .hamburger-wrap {
     display: none;
     justify-content: center;
     align-items: center;
-    width: 44px;
-    height: 44px;
-    background: #35526C;
+    width: 56px;
+    height: 56px;
+    background: #2B455C;
 }
 
 .hamburger {
     display: none;
     flex-direction: column;
-    width: 22px;
-    height: 18px;
+    width: 28px;
+    height: 22px;
     justify-content: space-between;
     cursor: pointer;
 }
@@ -93,7 +93,7 @@ header .hamburger-wrap {
 
 /* ✕ のアニメーション */
 .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(8px, 8px);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -106,7 +106,7 @@ header .hamburger-wrap {
 
 @media (max-width: 1024px) {
     header {
-        height: 44px;
+        height: 56px;
     }
 
     header .hamburger-wrap {
@@ -146,7 +146,7 @@ aside {
         height: 100%;
         /* opacity: 0.8; */
         z-index: 100;
-        margin-top: 44px;
+        margin-top: 56px;
     }
 }
 
@@ -227,7 +227,7 @@ main {
 @media (max-width: 1024px) {
     main {
         margin: 0;
-        padding: 44px 0 0 4px;
+        padding: 56px 0 0 4px;
     }
 }
 
@@ -256,8 +256,8 @@ article .about-text {
     color: white;
 }
 
-article hr {
-    margin: 64px 0 0;
+main article hr {
+    margin: 96px 0 0;
 }
 
 article h2 {
@@ -284,7 +284,7 @@ main hr {
     }
 
     article .title-area {
-        padding-top: 20px;
+        padding-top: 44px;
         /* margin-right: 16px; */
     }
 
@@ -293,21 +293,26 @@ main hr {
     }
 
     article .about-text {
-        margin-top: 20px;
+        margin-top: 24px;
         font-size: 16px;
     }
 
-    article hr {
-        margin: 32px 0 0;
+    main article hr {
+        margin: 64px 0 0;
     }
 
     article h2 {
-        margin-top: 40px;
+        margin-top: 64px;
         font-size: 20px;
     }
 
+    article h2:nth-of-type(1) {
+        margin-top: 32px;
+    }
+
     article img {
-        margin-top: 16px;
+        margin-top: 8px;
+        margin-bottom: 10px;
         padding: 4px;
         width: 88%;
     }
