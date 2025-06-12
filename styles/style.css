@@ -203,7 +203,7 @@ aside nav .menu-group-wrap li {
 }
 
 aside nav .menu-group-wrap a {
-    color: #FFF;
+    color: #F0F1F2;
     font-size: 16px;
     font-weight: normal;
     transition: 0.2s;
@@ -233,7 +233,7 @@ main {
 @media (max-width: 1024px) {
     main {
         margin: 0;
-        padding: 56px 0 0 4px;
+        padding: 56px 4px 0 4px;
     }
 }
 
@@ -333,19 +333,22 @@ main hr {
 
 footer {
     width: 100%;
-    height: 120px;
+    height: 144px;
     background: #4D6A84;
 }
 
 footer .page-link-area {
-    margin-top: 4px;
-    margin-left: 8px;
+    margin: 16px 4px 0;
     display: flex;
     justify-content: space-between;
 }
 
 footer .page-link {
-    padding: 16px;
+    padding: 12px 4px;
+}
+
+footer .page-link p {
+    transition: 0.2s;
 }
 
 footer .page-next-link p {
@@ -358,10 +361,17 @@ footer .page-link p {
 
 footer .page-link .mark {
     font-size: 12px;
+    padding: 0 2px;
 }
 
 footer .page-link .name {
+    margin-top: 4px;
     font-size: 17px;
+    color: #F0F1F2;
+}
+
+footer .page-link:hover p.name {
+    color: #FF9B59;
 }
 
 @media (max-width: 1024px) {
@@ -370,8 +380,7 @@ footer .page-link .name {
     }
 
     footer .page-link-area {
-        margin-top: 4px;
-        margin-left: 0;
+        margin: 4px 0 0;
     }
 
     footer .page-link {
