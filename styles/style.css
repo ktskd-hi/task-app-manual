@@ -171,6 +171,12 @@ aside nav {
     color: #FFF;
 }
 
+@media (max-width: 1024px) {
+    aside nav {
+        padding-bottom: 64px;
+    }
+}
+
 aside nav .menu-group-wrap {
     margin-top: 40px;
 }
