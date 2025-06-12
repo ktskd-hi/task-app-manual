@@ -20,6 +20,14 @@ html::-webkit-scrollbar-thumb {
   border: 0;
 }
 
+::selection {
+  background: #5881A6;
+}
+
+::-moz-selection {
+  background: #5881A6;
+}
+
 
 
 body {
