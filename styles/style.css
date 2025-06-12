@@ -270,6 +270,11 @@ article h2 {
     margin-top: 72px;
     font-size: 24px;
     color: white;
+    letter-spacing: 0.02em;
+}
+
+article h2::first-letter {
+    letter-spacing: 0.12em;
 }
 
 article img {
@@ -360,13 +365,13 @@ footer .page-link p {
 }
 
 footer .page-link .mark {
-    font-size: 12px;
+    font-size: 14px;
     padding: 0 2px;
 }
 
 footer .page-link .name {
     margin-top: 4px;
-    font-size: 17px;
+    font-size: 18px;
     color: #F0F1F2;
 }
 
